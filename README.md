@@ -48,8 +48,9 @@ At the same way, it is possible to get other services:
 ```python
 mail1 = sm.get_service("outlook")
 mail2 = sm.get_service("yahoo")
-...
 ```
+Note: at the moment they are handled the following services: `gmail`, `yahoo`, `outlook`. More coming in the future.
+To use other services, please read the [Custom Email Services](#custom-email-services) section.
 
 # Send/Read messages
 
