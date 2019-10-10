@@ -12,7 +12,7 @@ Emailpy is a basic python library for sending and reading email messages by usin
 # Installation
 Get `emailpy` source from Github and install it.
 
-##Linux
+## Linux
 Execute the following commands:
 ```sh
 git clone git://github.com/ianovir/emailpy.git
@@ -20,7 +20,7 @@ cd emailpy/
 sudo python emailpy/setup.py install
 sudo rm -rf emailpy
 ```   
-##Windows
+## Windows
 Download repository or execute the following git command:
 ```sh
 git clone git://github.com/ianovir/emailpy.git
@@ -32,7 +32,7 @@ python emailpy/setup.py install
 Finally, delete the folder `emailpy/`
    
    
-#How to use emailpy   
+# How to use emailpy   
 In your code, import `emailpy` and get a reference to a Service (e.g. Gmail) :
 ```python
 import emailpy
@@ -51,7 +51,7 @@ mail2 = sm.get_service("yahoo")
 ...
 ```
 
-#Send/Read messages
+# Send/Read messages
 
 Send message:
 ```python
@@ -92,7 +92,7 @@ messages = gmail.read(Constants.SINCE + ' 10-Aug-2019')
 
 For more information about IMAP search criterias, please take a look at [IMAP](https://tools.ietf.org/html/rfc3501).
 
-#Attachments
+# Attachments
 
 Sending attachment:
 ```python
@@ -112,7 +112,7 @@ for msg in yahoo.read(Criteria=Constants.UNSEEN, download_attachments=True):
 ```
 Please note that `EMessage.Attachments` contains only the names of the possible attachments, even if the `download_attachments` is ```False```.
 
-#Custom Email Services
+# Custom Email Services
 
 You can configure a custom Email server by creating a custom .xml service file (similar to `services.xml`).
 Example:
@@ -137,13 +137,13 @@ Another (faster) way to use custom email service is to use directly the `EmailSe
 my_sm = MailService("gmail", "smtp.gmail.com", 587, "imap.gmail.com", 993)
 ```
 
-#Account security
+# Account security
 In order to grant IMAP and SMTP access to your program with services (e.g. Gmail, Yahoo) you may need to lower the security of the account in order to permit access from third-party applications.
 
-#Notices
+# Notices
 This project is incomplete and some features may miss. Feel free to make your modifications and improvements by forking the master branch
 
-#Copyright
+# Copyright
 Copyright(c) 2019 Sebastiano Campisi - [ianovir.com](https://ianovir.com). 
 Read LICENSE file for more details.
 
